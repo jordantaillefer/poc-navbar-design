@@ -1,4 +1,4 @@
-class Test extends HTMLElement {
+class HomeComponent extends HTMLElement {
   constructor() {
     super();
   }
@@ -10,4 +10,4 @@ class Test extends HTMLElement {
   }
 }
 
-customElements.define('jt-test', Test)
+customElements.define('jt-home', HomeComponent)

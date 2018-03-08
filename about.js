@@ -1,7 +1,7 @@
-class TestA extends HTMLElement {
+class AboutComponent extends HTMLElement {
   constructor() {
     super();
-    this._styles = `jt-testa {
+    this._styles = `jt-about {
         color: red;
       }
     `
@@ -17,4 +17,4 @@ class TestA extends HTMLElement {
   }
 }
 
-customElements.define('jt-testa', TestA)
+customElements.define('jt-about', AboutComponent)
