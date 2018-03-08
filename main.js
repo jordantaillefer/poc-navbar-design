@@ -5,13 +5,18 @@ class Main extends HTMLElement {
   }
 
   connectedCallback () {
-    const routes = [];
+    const routes = new Map();
     let HomeComponent = document.createElement('jt-home');
     let AboutComponent = document.createElement('jt-about');
 
     let arrayNavigation = document.querySelector('#navigation-bar').querySelectorAll('li > a');
 
-    Array.from(arrayNavigation).forEach( a => console.log(a.getAttribute('route')))
+    Array.from(arrayNavigation).forEach( a => {
+      if(!routes.has(a.getAttribute('route'))) {
+        routes.set()
+      }
+      console.log(a.getAttribute('route'))
+    })
 
     this.appendChild(HomeComponent);
     setTimeout(() => this.removeChild(HomeComponent), 1000);
