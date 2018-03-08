@@ -5,21 +5,21 @@ html, body {
 }
 
 body {
-  width: 100vh;
+  width: 100vw;
   background-color: aliceblue;
 }
 
 header {
   width: 100vw;
+  position: fixed;
+  top: -20px;
+  left: -20px;
 }
 
 nav {
   width: calc(100% + 32px);
   background-color: #7B1FA2;
-  transform: rotateZ(-4deg);
-  position: fixed;
-  top: -20px;
-  left: -20px;
+  transform: rotateZ(-3deg);
   z-index: 1;
   box-shadow: 0 2px 2px #E1BEE7;
 }
@@ -29,8 +29,19 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 40px;
-  transform: rotateZ(4deg);
+  transform: rotateZ(3deg);
 }
+
+@media ( min-width: 660px ) {
+  nav {
+    transform: rotateZ(-1deg);
+  }
+
+  nav ul {
+    transform: rotateZ(1deg);
+  }
+}
+
 
 nav ul li:not(:first-child) {
   margin-left: 8px;
@@ -50,4 +61,27 @@ nav ul a {
   left: -20px;
   height: 97px;
   box-shadow: 0 2px 2px #F3E5F5;
+  top: 0px;
+  z-index: -1;
+}
+
+.main-container {
+  margin: 120px 0 60px 0;
+  height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+jt-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
